@@ -19,10 +19,10 @@ Column         |Type      |Options    |
 |users grounps |reference |foreign key
 |group id      |reference |foreign key
 
-##groupsテーブル
+## groupsテーブル
 Column|Type|Options|
-|-----|----|--------|
- name |stringnot null|
+|-----|------|--------|
+|name |string|not null|
 
 
 
