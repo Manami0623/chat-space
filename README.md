@@ -1,10 +1,11 @@
+ README
 ## chatsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |text  |string|     |
 |image |sting|      |
-|userid|reference|foreign key,index ture|
-|groupid|reference|foreign key,index true|
+|user_id|reference|foreign key,index true|
+|group_id|reference|foreign key,index true|
 
 ### Association
 - belongs_to :group
@@ -13,13 +14,11 @@
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name  |string|primaly key,null false,index|
-|passward|string|primaly key ,null,false|
-|e-mail|string|primaly key,null false|
+|name  |string|primary key,null false,index|
 
 ### Association
 - has_many :usergroups
-- has_many :groups,through:usergroups
+- has_many :groups,through: :usergroups
 - has_many :chats
 
 
@@ -41,8 +40,5 @@
 
 ### Association
 - has_many:usergroups
-- has_many:users,through:usergroups
-- has_many:groups
-
-
-
+- has_many:users,through: :usergroups
+- has_many:chats
