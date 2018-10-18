@@ -1,0 +1,48 @@
+
+%div.wrapper
+  .uppervar チャットグループが作成されました
+  .sidevar
+    .topvar
+      .top.clearfix
+        %p.li.top__username name
+        %p.li.top__setting.fas.fa.fa-cog
+        %p.li.top__edit.fas.fa.fa-edit
+
+
+    .bottomvar
+      .group
+        %p.bottomvar__groupname グループ名
+        %p.bottomvar__latestmessage 最新メッセージ
+      .group
+        %p.bottomvar__groupname グループ名
+        %p.bottomvar__latestmessage 最新メッセージ
+      .group
+        %p.bottomvar__groupname グループ名
+        %p.bottomvar__latestmessage 最新メッセージ
+
+  .content
+    .header
+      .groupname
+        %h1.groupname__currentgroupname sampleグループ
+        %ul.members
+          %li.members__list members
+          %li.members__membername manami
+          %li.members__membername name2
+      .editbottan Edit
+
+    .message
+      .line
+        %p.line__uppername 堀江愛美
+        %p.line__date 2018/10/17
+        %br
+        %p.line__centermessage こんにちは！！！！
+        %img.line__img
+    .form
+      %form
+        .inputting
+          %input.inputting-text{type: "text_field",placeholder:"type a message"}
+          %label.image_label
+            %input{type: "file"}
+            %i.inputting-text.fas.fa.fa-image.image_icon
+        %input.inputting-btn{type: "submit",value: "SEND"}
+
