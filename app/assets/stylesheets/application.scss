@@ -87,6 +87,7 @@ html,body,.wrapper,.sidevar,.content {
   width:calc(100% - 300px);
   float:left;
   .header{
+    padding-right:40px;
     height: 100px;
     box-sizing: border-box;
     border-bottom: solid 1px #eeeeee;
@@ -117,7 +118,7 @@ html,body,.wrapper,.sidevar,.content {
       height:40px;
       width:50px;
       color:#38AEF0;
-      border: 1px solid;
+      border: 3px solid;
       float: right;
       margin-top:30px;
     }
