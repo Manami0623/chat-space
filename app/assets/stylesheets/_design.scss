@@ -41,21 +41,24 @@ html,body,.wrapper,.sidevar,.content {
      color:$white;
      float:left;
     }
-    &__edit
-    {
-    font-weight:bold;
-     color:$white;
-     float:right;
-     height: 100%;
-     margin-right: 10px;
-    }
-    &__setting
-    {
-    font-weight:bold;
-     color:$white;
-     float:right;
-     height: 100%;
-    }
+  .icon{
+
+        &__edit{
+        font-weight:bold;
+        color:$white;
+        position:right;
+        height: 100%;
+        margin-right: 10px;
+
+        }
+        &__setting{
+        font-weight:bold;
+        color:$white;
+        float:left;
+        height: 100%;
+        margin-right: 10px;
+       }
+  }
   }
 }
 .bottomvar{

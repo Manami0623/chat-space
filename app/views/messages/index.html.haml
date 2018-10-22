@@ -4,10 +4,14 @@
   .sidevar
     .topvar
       .top.clearfix
-        %p.li.top__username name
-        %p.li.top__setting.fas.fa.fa-cog
-        %p.li.top__edit.fas.fa.fa-edit
-
+        %p.li.top__username
+          = current_user.name
+        .two.edit
+          = link_to do
+            = fa_icon 'pensil-square-o',class: 'icon'
+        .two.setting
+          = link_to edit_user_path(current_user) do
+            = fa_icon 'cog', class: 'icon'
 
     .bottomvar
       .group
