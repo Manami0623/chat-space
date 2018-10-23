@@ -16,15 +16,13 @@
 
 
     .bottomvar
-      .group
-        %p.bottomvar__groupname グループ名
-        %p.bottomvar__latestmessage 最新メッセージ
-      .group
-        %p.bottomvar__groupname グループ名
-        %p.bottomvar__latestmessage 最新メッセージ
-      .group
-        %p.bottomvar__groupname グループ名
-        %p.bottomvar__latestmessage 最新メッセージ
+      - current_user.groups.each do |group|
+        .group
+          = link_to group_messages_path(group) do
+            .bottomvar__groupname
+              = group.name
+            .bottomvar__latestmessage
+              メッセージはまだありません。
 
   .content
     .header

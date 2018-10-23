@@ -1,5 +1,6 @@
 html,body,.wrapper,.sidevar,.content {
   height:100%;
+  overflow: scroll;
 }
 
 .clearfix::after{
