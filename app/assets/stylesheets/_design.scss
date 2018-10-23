@@ -1,5 +1,6 @@
 html,body,.wrapper,.sidevar,.content {
   height:100%;
+  overflow: scroll;
 }
 
 .clearfix::after{
@@ -12,13 +13,7 @@ html,body,.wrapper,.sidevar,.content {
    width:100%;
   position:relative;
   }
- .uppervar{
-  width:100%;
-  height:30px;
-  background-color:$blue;
-  text-align:center;
-  color:$white;
- }
+
    .sidevar{
   background-color:#2f3e51;
   width:300px;
@@ -32,34 +27,39 @@ html,body,.wrapper,.sidevar,.content {
     line-height: 100px;
   }
   .top{
-    width:100%;
-    margin: auto;
-    height: 100%;
+    // width:100%;
+    // margin: auto;
+    // height: 100%;
     &__username{
-    height: 100%;
+    // height: 100%;
     font-weight:bold;
      color:$white;
      float:left;
     }
-  .icon{
 
-        &__edit{
-        font-weight:bold;
-        color:$white;
-        position:right;
-        height: 100%;
-        margin-right: 10px;
 
-        }
-        &__setting{
-        font-weight:bold;
-        color:$white;
-        float:left;
-        height: 100%;
-        margin-right: 10px;
+  ul{
+    float: right;
+    line-height: 100px;
+      .edit{
+      font-weight:bold;
+      float:left;
+      color:$white;
+      height: 100%;
+      margin-right: 10px;
+
        }
-  }
-  }
+      .setting{
+      font-weight:bold;
+      color:$white;
+      float:left;
+      height: 100%;
+      margin-right: 10px;
+      }
+    }
+
+
+    }
 }
 .bottomvar{
   padding:0 20px;
@@ -183,4 +183,8 @@ html,body,.wrapper,.sidevar,.content {
     background-color:$blue;
     color:$white;
   }
+}
+
+.icon {
+  color: white;
 }
