@@ -1,5 +1,6 @@
 html,body,.wrapper,.sidevar,.content {
   height:100%;
+  overflow: scroll;
 }
 
 .clearfix::after{
@@ -12,13 +13,7 @@ html,body,.wrapper,.sidevar,.content {
    width:100%;
   position:relative;
   }
- .uppervar{
-  width:100%;
-  height:30px;
-  background-color:$blue;
-  text-align:center;
-  color:$white;
- }
+
    .sidevar{
   background-color:#2f3e51;
   width:300px;
@@ -32,34 +27,39 @@ html,body,.wrapper,.sidevar,.content {
     line-height: 100px;
   }
   .top{
-    width:100%;
-    margin: auto;
-    height: 100%;
+    // width:100%;
+    // margin: auto;
+    // height: 100%;
     &__username{
-    height: 100%;
+    // height: 100%;
     font-weight:bold;
      color:$white;
      float:left;
     }
-  .icon{
 
-        &__edit{
-        font-weight:bold;
-        color:$white;
-        position:right;
-        height: 100%;
-        margin-right: 10px;
 
-        }
-        &__setting{
-        font-weight:bold;
-        color:$white;
-        float:left;
-        height: 100%;
-        margin-right: 10px;
+  ul{
+    float: right;
+    line-height: 100px;
+      .edit{
+      font-weight:bold;
+      float:left;
+      color:$white;
+      height: 100%;
+      margin-right: 10px;
+
        }
-  }
-  }
+      .setting{
+      font-weight:bold;
+      color:$white;
+      float:left;
+      height: 100%;
+      margin-right: 10px;
+      }
+    }
+
+
+    }
 }
 .bottomvar{
   padding:0 20px;
@@ -84,8 +84,9 @@ html,body,.wrapper,.sidevar,.content {
     height: 100px;
     box-sizing: border-box;
     border-bottom: solid 1px #eeeeee;
+    padding:0px 40px;
+
     .groupname{
-      padding:0 40px;
       padding-top:35px;
       padding-bottom:15px;
       float: left;
@@ -119,10 +120,12 @@ html,body,.wrapper,.sidevar,.content {
   .message{
     height:calc(100% - 190px);
     background-color:#FAFAFA;
+    overflow: scroll;
+
+    padding:0px 40px;
   }
   .line{
-    padding:0 40px;
-    padding-top:46px;
+      padding-top:46px;
     p.line__uppername {
       font-size:16px;
       font-weight:bold;
@@ -143,44 +146,70 @@ html,body,.wrapper,.sidevar,.content {
 }
 .form{
   width: 100%;
+  height: 100%;
   padding:20px 40px;
   background-color:#AAAAAA;
   box-sizing: border-box;
-   .inputting {
-    position: relative;
+  position:fixed;
+
+
+  .form__message {
+    // position: relative;
     width: calc(100% - 115px);
     float: left;
-    margin-right:15px;
-     // margin:20px 0px;
-  }
-  input.inputting-text{
     height:50px;
     padding-left:10px;
-    width: 100%;
+    width: 70%;
     box-sizing: border-box;
+    border:none;
   }
-  label{
-    position: absolute;
-    text-align:center;
-    top: 2px;
-    right: 10px;
-    i {
-      padding:15px 15px;
-      }
-      input{
-        display: none;
-      }
-    }
-  .inputting-btn{
-    border:0;
-    input{
-      display:none;
-    }
-  }
-  input.inputting-btn{
+  // label{
+  //   position: absolute;
+  //   text-align:center;
+  //   top: 2px;
+  //   right: 10px;
+  //   i {
+  //     padding:15px 15px;
+  //     }
+      // input{
+      //   display: none;
+      // }
+  //   }
+
+  .form__submit{
     height:50px;
     width:90px;
     background-color:$blue;
     color:$white;
+    border:none;
+    margin-left:15px;
   }
+  .form__mask{
+    position: relative;
+    background-color:$white;
+    float: left;
+    height: 50px;
+    padding-right: 10px;
+    width:30px;
+    // display:none;
+    label.form__mask__image{
+      color:black;
+
+      .icon{
+        color:black;
+        position:absolute;
+        padding-top:15px;
+
+
+            }
+      .hidden{
+        opacity:0;
+        height:0;
+      }
+    }
+  }
+}
+
+.icon {
+  color: white;
 }
