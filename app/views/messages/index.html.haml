@@ -6,10 +6,11 @@
   .content
     .header
       .groupname
-        %h1.groupname__currentgroupname sampleグループ
+        %h1.groupname__currentgroupname
+          / = group.show_member
         %ul.members
-          %li.members__list members
-          %li.members__membername manami
+          %li.members__list
+          / %li.members__membername = group.name
           %li.members__membername name2
       .editbottan Edit
 
