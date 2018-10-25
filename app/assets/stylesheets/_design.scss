@@ -1,6 +1,8 @@
-html,body,.wrapper,.sidevar,.content {
+html,body,.wrapper,.sidevar,.content{
   height:100%;
+  width:100%;
   overflow: scroll;
+
 }
 
 .clearfix::after{
@@ -10,7 +12,7 @@ html,body,.wrapper,.sidevar,.content {
 }
 
  .wrapper{
-   width:100%;
+
   position:relative;
   }
 
@@ -64,6 +66,7 @@ html,body,.wrapper,.sidevar,.content {
 .bottomvar{
   padding:0 20px;
   padding-top:20px;
+
   .group{
     .bottomvar__groupname{
       font:15px;
@@ -117,45 +120,54 @@ html,body,.wrapper,.sidevar,.content {
       margin-top:30px;
     }
   }
-  .message{
+  .messages{
     height:calc(100% - 190px);
     background-color:#FAFAFA;
     overflow: scroll;
+    padding-top:46px;
+    padding-right:40px;
+    padding-left:40px;
 
-    padding:0px 40px;
+}
+  .message{
+    padding-top:46px;
+
+    background-color:#FAFAFA;
+
   }
   .line{
-      padding-top:46px;
-    p.line__uppername {
+
+    &__uppername {
       font-size:16px;
       font-weight:bold;
       color:#434A54;
       float:left;
       padding-right:10px;
+
      }
-    p.line__date {
+    &__date {
       font-size:12px;
       color:$grey;
       float:left;
      }
-    p.line__centermessage {
+    &__centermessage__content{
       font-size:14px;
       color:#434A54;
+      padding-bottom:40px;
+
     }
   }
 }
 .form{
-  width: 100%;
-  height: 100%;
+  width:100%;
+  height:90px;
   padding:20px 40px;
   background-color:#AAAAAA;
   box-sizing: border-box;
-  position:fixed;
-
+  padding-bottom:20px;
 
   .form__message {
-    // position: relative;
-    width: calc(100% - 115px);
+    // width:calc(100%-90px);
     float: left;
     height:50px;
     padding-left:10px;
@@ -163,18 +175,6 @@ html,body,.wrapper,.sidevar,.content {
     box-sizing: border-box;
     border:none;
   }
-  // label{
-  //   position: absolute;
-  //   text-align:center;
-  //   top: 2px;
-  //   right: 10px;
-  //   i {
-  //     padding:15px 15px;
-  //     }
-      // input{
-      //   display: none;
-      // }
-  //   }
 
   .form__submit{
     height:50px;
@@ -183,6 +183,7 @@ html,body,.wrapper,.sidevar,.content {
     color:$white;
     border:none;
     margin-left:15px;
+    float:right;
   }
   .form__mask{
     position: relative;
@@ -191,11 +192,12 @@ html,body,.wrapper,.sidevar,.content {
     height: 50px;
     padding-right: 10px;
     width:30px;
-    // display:none;
-    label.form__mask__image{
-      color:black;
+    color:black;
+    width:calc(100%-40px);
 
-      .icon{
+
+
+    .icon{
         color:black;
         position:absolute;
         padding-top:15px;
@@ -205,8 +207,9 @@ html,body,.wrapper,.sidevar,.content {
       .hidden{
         opacity:0;
         height:0;
+        width:10px;
       }
-    }
+
   }
 }
 
