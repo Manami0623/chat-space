@@ -1,6 +1,9 @@
-html,body,.wrapper,.sidevar,.content {
+html,body,.wrapper,.sidevar,.content{
+  height:100%;
+  width:100%;
   height:100%;
   overflow: scroll;
+
 }
 
 .clearfix::after{
@@ -10,7 +13,7 @@ html,body,.wrapper,.sidevar,.content {
 }
 
  .wrapper{
-   width:100%;
+   height:100%;
   position:relative;
   }
 
@@ -18,6 +21,7 @@ html,body,.wrapper,.sidevar,.content {
   background-color:#2f3e51;
   width:300px;
   float:left;
+
   }
  .topvar{
   background-color:#253141;
@@ -64,6 +68,10 @@ html,body,.wrapper,.sidevar,.content {
 .bottomvar{
   padding:0 20px;
   padding-top:20px;
+  height:100%;
+
+
+
   .group{
     .bottomvar__groupname{
       font:15px;
@@ -84,8 +92,9 @@ html,body,.wrapper,.sidevar,.content {
     height: 100px;
     box-sizing: border-box;
     border-bottom: solid 1px #eeeeee;
+    padding:0px 40px;
+
     .groupname{
-      padding:0 40px;
       padding-top:35px;
       padding-bottom:15px;
       float: left;
@@ -116,72 +125,98 @@ html,body,.wrapper,.sidevar,.content {
       margin-top:30px;
     }
   }
-  .message{
+  .messages{
+    overflow: scroll;
     height:calc(100% - 190px);
     background-color:#FAFAFA;
+    overflow: scroll;
+    padding-top:46px;
+    padding-right:40px;
+    padding-left:40px;
+
+}
+  .message{
+    padding-top:46px;
+
+    background-color:#FAFAFA;
+
   }
   .line{
-    padding:0 40px;
-    padding-top:46px;
-    p.line__uppername {
+
+    &__uppername {
       font-size:16px;
       font-weight:bold;
       color:#434A54;
       float:left;
       padding-right:10px;
+
      }
-    p.line__date {
+    &__date {
       font-size:12px;
       color:$grey;
       float:left;
      }
-    p.line__centermessage {
+    &__centermessage__content{
       font-size:14px;
       color:#434A54;
+      padding-bottom:40px;
+
     }
   }
 }
 .form{
-  width: 100%;
+  width:100%;
+  height:90px;
   padding:20px 40px;
   background-color:#AAAAAA;
   box-sizing: border-box;
-   .inputting {
-    position: relative;
-    width: calc(100% - 115px);
+  padding-bottom:20px;
+
+  .form__message {
+    // width:calc(100%-90px);
     float: left;
-    margin-right:15px;
-     // margin:20px 0px;
-  }
-  input.inputting-text{
     height:50px;
     padding-left:10px;
-    width: 100%;
+    width: 70%;
     box-sizing: border-box;
+    border:none;
   }
-  label{
-    position: absolute;
-    text-align:center;
-    top: 2px;
-    right: 10px;
-    i {
-      padding:15px 15px;
-      }
-      input{
-        display: none;
-      }
-    }
-  .inputting-btn{
-    border:0;
-    input{
-      display:none;
-    }
-  }
-  input.inputting-btn{
+
+  .form__submit{
     height:50px;
     width:90px;
     background-color:$blue;
     color:$white;
+    border:none;
+    margin-left:15px;
+    float:right;
+  }
+  .form__mask{
+    position: relative;
+    background-color:$white;
+    float: left;
+    height: 50px;
+    padding-right: 10px;
+    padding-left:100px;
+    width:30px;
+    color:black;
+    width:calc(100%-40px);
+
+
+
+    .icon{
+        color:black;
+        position:absolute;
+        padding-top:15px;
+
+
+            }
+      .hidden{
+        opacity:0;
+        height:0;
+        width:10px;
+      }
+
   }
 }
 
