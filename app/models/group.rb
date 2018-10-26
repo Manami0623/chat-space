@@ -12,13 +12,5 @@ class Group < ApplicationRecord
       else
         'まだメッセージがありません。'
       end
-
-    # def show_member
-    #    if (members = groups.name).present?
-    #    members.content ? ?members.content
-    #     else
-    #   'まだメンバーはいません。'
-    #   end
-    # end
   end
 end
