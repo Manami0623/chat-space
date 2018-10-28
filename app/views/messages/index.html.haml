@@ -7,11 +7,12 @@
     .header
       .groupname
         %h1.groupname__currentgroupname
-          / = group.show_member
+          = @group.name
         %ul.members
           %li.members__list
-          / %li.members__membername = group.name
-          %li.members__membername name2
+          %li.members__membername
+            - @group.users.each do|member|
+              = member.name
       .editbottan Edit
 
     .messages
