@@ -12,6 +12,8 @@ $(document).on('turbolinks:load', function() {
         <br>
         <div class="line__centermessage">
           ${message.content}
+          ${message.image}
+
         </div>
       </div>
     </div>    `
@@ -41,7 +43,7 @@ $(document).on('turbolinks:load', function() {
 
     })
     .fail(function(){
-      alert('error');
+      alert('入力してください');
     })
   })
 });
