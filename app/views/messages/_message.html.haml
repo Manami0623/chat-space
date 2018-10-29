@@ -6,8 +6,8 @@
       = message.created_at.strftime('%Y年%m月%d日 %H:%M:%S')
     %br
     .line__centermessage
-  - if message.content.present?
-    %p.line__centermessage__content
-      = message.content
+      - if message.content.present?
+        %p.line__centermessage__content
+        = message.content
       = image_tag message.image.url, class: `line__centermessage__image` if message.image.present?
 
