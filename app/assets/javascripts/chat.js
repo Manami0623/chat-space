@@ -1,6 +1,9 @@
 $(document).on('turbolinks:load', function() {
   function buildHTML(message){
-    var html =`
+    var picture = message.image === null ? "" : `<img src= "${message.image}">`;
+
+    var html =
+    `
     <div class="message">
       <div class="line">
         <div class="line__uppername">
@@ -11,8 +14,8 @@ $(document).on('turbolinks:load', function() {
         </div>
         <br>
         <div class="line__centermessage">
-          ${message.content}
-          ${message.image}
+            ${message.content}
+            ${picture}
 
         </div>
       </div>
@@ -20,6 +23,7 @@ $(document).on('turbolinks:load', function() {
 
 
     return html;
+
   }
     $('#msg_form').on('submit', function(e){
       e.preventDefault();
