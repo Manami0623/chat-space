@@ -18,6 +18,7 @@
     .messages
       = render @messages
 
+
     .form
       = form_for [@group, @message], html: {id: 'msg_form'} do |f|
         = f.text_field :content, class: 'form__message', placeholder: 'type a message'
