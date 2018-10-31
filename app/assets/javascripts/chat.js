@@ -1,9 +1,35 @@
 $(document).on('turbolinks:load', function() {
-  $(function(){
-    $('#message_create').on('submit', function(e){
+  function buildHTML(message){
+    var picture = message.image === null ? "" : `<img src= "${message.image}">`;
+
+    var html =
+    `
+    <div class="message">
+      <div class="line">
+        <div class="line__uppername">
+          ${message.user_name}
+        </div>
+        <div class="line__date">
+          ${message.created_at}
+        </div>
+        <br>
+        <div class="line__centermessage">
+            ${message.content}
+            ${picture}
+
+        </div>
+      </div>
+    </div>    `
+
+
+    return html;
+
+  }
+    $('#msg_form').on('submit', function(e){
       e.preventDefault();
       var formData = new FormData(this);
       var url = $(this).attr('action')
+
       $.ajax({
         url: url,
         type: "POST",
@@ -12,5 +38,17 @@ $(document).on('turbolinks:load', function() {
         processData: false,
         contentType: false
     })
+    .done(function(data){
+      var html = buildHTML(data);
+      $('.messages').append(html)
+      $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
+      $('.form__message').reset();
+      $('.form__submit').prop('disabled', false);
+
+    })
+    .fail(function(){
+      alert('入力してください');
+    })
   })
 });
+
