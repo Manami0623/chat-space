@@ -15,10 +15,9 @@ class GroupsController < ApplicationController
   def create
     @group = Group.new(group_params)
     if @group.save
-     redirect_to root_path,notice:"グループを作成しました"
-  else
-    # redirect_to new_group_path, alert: "グループ作成できませんでした"
-    render :new
+      redirect_to root_path,notice:"グループを作成しました"
+    else
+      redirect_to new_group_path, alert: "グループ作成できませんでした"
   end
 
   def update

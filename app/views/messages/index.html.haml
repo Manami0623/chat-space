@@ -13,7 +13,9 @@
           %li.members__membername
             - @group.users.each do|member|
               = member.name
-      .editbottan Edit
+      .editbottan
+        = link_to "Edit", edit_user_path(@group)
+
 
     .messages
       = render @messages
