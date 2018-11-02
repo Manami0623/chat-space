@@ -123,7 +123,12 @@ html,body,.wrapper,.sidevar,.content{
       border: 1px solid;
       float: right;
       margin-top:30px;
+        a{
+           text-decoration: none;
+           color:$blue;
+        }
     }
+
   }
   .messages{
     overflow: scroll;
@@ -137,7 +142,6 @@ html,body,.wrapper,.sidevar,.content{
 }
   .message{
     padding-top:46px;
-
     background-color:#FAFAFA;
 
   }
