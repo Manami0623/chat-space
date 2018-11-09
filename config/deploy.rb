@@ -1,4 +1,3 @@
-
 set :linked_files, %w{ config/secrets.yml }
 
 set :default_env, {
