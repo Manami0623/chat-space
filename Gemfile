@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+
+
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
@@ -76,5 +78,5 @@ gem 'devise'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'pry-rails'
-
 gem "loofah", ">= 2.2.3"
+gem 'fog-aws'
