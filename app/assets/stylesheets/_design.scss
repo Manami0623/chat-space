@@ -177,18 +177,18 @@ html,body,.wrapper,.sidevar,.content{
   padding-bottom:20px;
 
   .form__message {
-    // width:calc(100%-90px);
+    width: calc(100% - 255px);
     float: left;
     height:50px;
     padding-left:10px;
-    width: 70%;
+
     box-sizing: border-box;
     border:none;
   }
 
   .form__submit{
-    height:50px;
-    width:90px;
+    height: 50px;
+    width: 90px;
     background-color:$blue;
     color:$white;
     border:none;
@@ -204,7 +204,6 @@ html,body,.wrapper,.sidevar,.content{
     padding-left:100px;
     width:30px;
     color:black;
-    width:calc(100%-40px);
 
 
 

@@ -28,8 +28,7 @@ $(document).on('turbolinks:load', function() {
         $.ajax({
           url: location.href,
           type: 'GET',
-          data:
-            { id: message_id },
+          data: { id: message_id },
           dataType: 'json'
         })
         .done(function(data){
@@ -39,8 +38,8 @@ $(document).on('turbolinks:load', function() {
               html = buildHTML(message);
               $('.messages').append(html)
             });
+            $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
           }
-          $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
         });
     }, 5000 );
 
