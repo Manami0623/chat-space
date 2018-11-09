@@ -9,5 +9,6 @@
       - if message.content.present?
         %p.line__centermessage__content
         = message.content
+        %br
       = image_tag message.image.url, class: `line__centermessage__image` if message.image.present?
 
