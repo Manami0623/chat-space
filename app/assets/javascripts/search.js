@@ -30,11 +30,11 @@ function addUser(name,id){
                 <p class='chat-group-user__name'>${name}</p>
                 <a class='user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn'>削除</a>
               </div>`
-    $('.chat-group-form__member').append(html);
+    return html;
 }
 
 
-  $(".user-search-field ").on("keyup", function() {
+  $(".user-search-field").on("keyup", function() {
     var input = $(this).val();
     search_list.empty();
     $.ajax({
@@ -44,6 +44,7 @@ function addUser(name,id){
       dataType: 'json'
     })
     .done(function(users) {
+    console.log(users);
       $("#user-search-field").empty();
       if (users.length !== 0) {
         users.forEach(function(user){
@@ -60,10 +61,12 @@ function addUser(name,id){
 
 
 
-  $(document).on('click', '.user-search-add', function() {
-    var id = $(this).data('user-id');
-    var name = $(this).data('user-name');
-    addUser(name,id);
+  $('.chat-group-form').on('click', '.user-search-add', function() {
+    console.log(this);
+    var id = $(this).attr('data-user-id');
+    var name = $(this).attr('data-user-name');
+    var html = addUser(name,id);
+    $('#chat-group-form__member').append(html);
     $(this).parent().remove();
   });
 

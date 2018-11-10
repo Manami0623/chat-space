@@ -43,7 +43,7 @@ $(document).on('turbolinks:load', function() {
         });
     }, 5000 );
 
-    $('#msg_form').on('submit', function(e){
+    $('.form_submit').on('submit', function(e){
       e.preventDefault();
       var formData = new FormData(this);
       var url = $(this).attr('action')
@@ -61,6 +61,7 @@ $(document).on('turbolinks:load', function() {
       $('.messages').append(html)
       $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
       $('.form__message').val("");
+      $('.hidden').val("");
       $('.form__submit').prop('disabled', false);
 
     })

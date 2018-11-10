@@ -26,12 +26,12 @@
 
     .chat-group-user.clearfix
       .chat-group-form__field--right
-        .chat-group-form__member
+        #chat-group-form__member
           .chat-group-user.clearfix
             %input{name: "group[user_ids][]", type: "hidden", value: "#{current_user.id}"}
             %p.chat-group-user__name= current_user.name
-            %a.user-search-remove.chat-group-user__btn.chat-group-user__btn--remove.js-remove-btn{ "data-user-id": "#{current_user.id}", "data-user-name": "#{current_user.id}" }
-              削除
+            / %a.user-search-remove.chat-group-user__btn.chat-group-user__btn--remove.js-remove-btn{ "data-user-id": "#{current_user.id}", "data-user-name": "#{current_user.id}" }
+            /   削除
       - @group.users.each do |user|
         - if user != current_user
           .chat-group-user.clearfix{ id: "chat-group-user-#{user.id}" }
@@ -39,7 +39,7 @@
             %p.chat-group-user__name
               = user.name
             - if user.id != current_user.id
-              %a.user-search-remove.chat-group-user__btn.chat-group-user__btn--remove{ 'data-user-id': user.id }削除
+              / %a.user-search-remove.chat-group-user__btn.chat-group-user__btn--remove{ 'data-user-id': user.id }削除
   .chat-group-form__field.clearfix
     .chat-group-form__field--left
     .chat-group-form__field--right
