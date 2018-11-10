@@ -58,14 +58,7 @@ function addUser(name,id){
     });
   });
 
-   $('#group_name').on('click', '.user-search-field', function(e) {
-    e.preventDefault();
-    var id = $(this).data('userId');
-    var name = $(this).data('userName');
-    var insertHTML = buildMemberHTML(id, name);
-    $('#group_name').append(insertHTML);
-    $(this).parent('.chat-group-user').remove();
-  });
+
 
   $(document).on('click', '.user-search-add', function() {
     var id = $(this).data('user-id');
