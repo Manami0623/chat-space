@@ -26,7 +26,7 @@ $(document).on('turbolinks:load', function() {
 
     var interval = setInterval(function() {
       var message_id = $('.message:last').data('id');
-       if(message_id == null){message_id = 0}
+      if(message_id == null){message_id = 0}
         $.ajax({
           url: location.href,
           type: 'GET',
