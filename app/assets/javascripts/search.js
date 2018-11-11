@@ -44,8 +44,7 @@ function addUser(name,id){
       dataType: 'json'
     })
     .done(function(users) {
-    console.log(users);
-      $("#user-search-field").empty();
+      $("#user-search-result").empty();
       if (users.length !== 0) {
         users.forEach(function(user){
           appendUser(user);

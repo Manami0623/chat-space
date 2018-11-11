@@ -1,6 +1,6 @@
 $(document).on('turbolinks:load', function() {
   function buildHTML(message){
-    var picture = message.image === null ? "" : `<img src= "${message.image}">`;
+    var picture = message.image === null ? "" : `<br><img src= "${message.image}">`;
 
     var html =
     `
@@ -59,9 +59,13 @@ $(document).on('turbolinks:load', function() {
         contentType: false
     })
     .done(function(data){
+      if (data.id != null){
       var html = buildHTML(data);
       $('.messages').append(html)
       $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
+    } else {
+      alert('入力してください')
+    }
       $('.form__message').val("");
       $('.hidden').val("");
       $('.form__submit').prop('disabled', false);
