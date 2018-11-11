@@ -18,7 +18,9 @@ class GroupsController < ApplicationController
       redirect_to root_path,notice:"グループを作成しました"
     else
       redirect_to new_group_path, alert: "グループ作成できませんでした"
+    end
   end
+
 
   def update
     if  @group.update(group_params)
@@ -28,7 +30,6 @@ class GroupsController < ApplicationController
     end
   end
 
-  end
 
   private
   def group_params
